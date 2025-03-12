@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "agent",
+      "password": "password"
+    }
+  ],
+  "tickets": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "status": "open",
+      "createdAt": "2023-10-01",
+      "notes": [
+        "Policy details inquiry"
+      ]
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "status": "in progress",
+      "createdAt": "2023-10-02",
+      "notes": [
+        "Claim processing"
+      ]
+    },
+    {
+      "customerId": 2,
+      "status": "open",
+      "createdAt": "2025-03-12",
+      "notes": [
+        "Incoming call from customer"
+      ],
+      "id": 3
+    },
+    {
+      "customerId": 2,
+      "status": "open",
+      "createdAt": "2025-03-12",
+      "notes": [
+        "needs help with xyz\n"
+      ],
+      "id": 4
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "policyNumber": "FE12345",
+      "coverage": 10000,
+      "beneficiary": "Jane Doe"
+    },
+    {
+      "id": 2,
+      "name": "Alice Smith",
+      "policyNumber": "FE67890",
+      "coverage": 15000,
+      "beneficiary": "Bob Smith"
+    }
+  ]
+}
