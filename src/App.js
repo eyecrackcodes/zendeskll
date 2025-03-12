@@ -24,11 +24,26 @@ const theme = createTheme({
       main: "#1976d2",
       light: "#42a5f5",
       dark: "#1565c0",
+      contrastText: "#ffffff",
     },
     secondary: {
       main: "#dc004e",
       light: "#ff4081",
       dark: "#9a0036",
+      contrastText: "#ffffff",
+    },
+    background: {
+      default: "#f5f5f5",
+      paper: "#ffffff",
+    },
+  },
+  typography: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    h5: {
+      fontWeight: 600,
+    },
+    h6: {
+      fontWeight: 600,
     },
   },
   components: {
@@ -36,6 +51,29 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: "none",
+          borderRadius: 8,
+          padding: "8px 16px",
+        },
+        contained: {
+          boxShadow: "none",
+          "&:hover": {
+            boxShadow: "0px 2px 4px rgba(0,0,0,0.1)",
+          },
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          borderRadius: 12,
+          boxShadow: "0px 2px 4px rgba(0,0,0,0.05)",
+        },
+      },
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          padding: "16px",
         },
       },
     },
@@ -66,7 +104,12 @@ function App() {
       <CssBaseline />
       <Router>
         <Box
-          sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            minHeight: "100vh",
+            bgcolor: "background.default",
+          }}
         >
           <Routes>
             <Route
